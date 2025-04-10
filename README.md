@@ -39,8 +39,11 @@ JOIN Customers c ON o.customer_id = c.customer_id
 GROUP BY c.name
 ORDER BY total_spent DESC;
 📄 Output: orders_by_customer.csv
-2. 📦 Most Popular Products (by Quantity Sold)
+```
+### 2. 📦 Most Popular Products (by Quantity Sold)
+
 Identifies products that have been sold the most.
+```
 SELECT 
     p.name AS product_name,
     SUM(od.quantity) AS total_sold
@@ -49,9 +52,11 @@ JOIN Products p ON od.product_id = p.product_id
 GROUP BY p.name
 ORDER BY total_sold DESC;
 📄 Output: products_by_quantity.csv
+```
 
-3. 💰 Revenue by Product
+### 3. 💰 Revenue by Product
 Finds which products generated the highest total revenue.
+```
 SELECT 
     p.name AS product_name,
     SUM(od.quantity * od.price) AS total_revenue
