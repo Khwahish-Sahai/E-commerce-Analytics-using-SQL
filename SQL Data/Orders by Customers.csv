@@ -1,0 +1,4 @@
+order_id,order_date,customer_name,total_amount
+101,2023-08-15,"Alice Smith",200.00
+102,2023-08-16,"Bob Johnson",150.00
+103,2023-09-01,"Alice Smith",300.00
